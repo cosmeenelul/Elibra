@@ -1,0 +1,249 @@
+@media (max-width: 991.98px) {
+  .center-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  body {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
+  .navbar {
+    background-color: #ffffff;
+  }
+  .nav-link {
+    color: #111 !important;
+  }
+  .navbar-brand {
+    color: #111;
+  }
+}
+html,
+body {
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: 'Quicksand', 'Playfair Display', 'Dancing Script', Arial,
+    sans-serif;
+}
+body {
+  background-image: url('poze/camera-masaj.jpg');
+  background-size: 110%; /* zoom imagine */
+  background-repeat: no-repeat; /* nu se repetă */
+  background-position: center; /* centrată */
+  position: relative;
+  z-index: 1;
+}
+
+#bg-slideshow {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease;
+}
+
+.bg-overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-overlay-text h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #e8e821 20%, #ebe018 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 32px rgba(46, 95, 167, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+  padding-top: 7rem;
+}
+.bg-overlay-text p {
+  font-size: xx-large;
+  font-weight: 400;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 1), 0 2px 8px rgba(46, 95, 167, 0.25);
+  max-width: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 991.98px) {
+  .bg-overlay-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .bg-overlay-text p {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    color: #ffffff !important;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35),
+      0 2px 8px rgba(46, 95, 167, 0.25) !important;
+  }
+}
+@media (min-width: 992px) {
+  .navbar {
+    max-width: 1600px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    background-color: transparent !important;
+  }
+  .nav-link {
+    transition: color 0.5s ease;
+    font-size: large;
+    font-weight: 300;
+  }
+
+  .nav-link:hover {
+    color: #a77544 !important;
+  }
+  .navbar-nav {
+    display: flex;
+    gap: 1rem;
+  }
+  .bg-overlay-text button {
+    font-size: x-large;
+  }
+}
+
+.navbar-scroll {
+  background-color: #fff !important;
+  transition: background-color 1s;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-scroll .nav-link {
+  color: #111 !important;
+}
+.navbar-scroll .nav-link:hover {
+  color: #a77544 !important;
+}
+
+.card {
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(46, 95, 167, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s;
+  /* Gradient pe fundalul cardului */
+  background: linear-gradient(135deg, #a77544 0%, #fff3e0 100%);
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card.card-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 48px rgba(46, 95, 167, 0.18),
+    0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-top {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  height: 220px;
+  object-fit: cover;
+  filter: brightness(0.95) saturate(1.1);
+  transition: filter 0.3s;
+}
+
+.card:hover .card-img-top {
+  filter: brightness(1) saturate(1.2);
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #353434;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.card-footer {
+  background: none;
+  border-top: none;
+  text-align: right;
+  padding-right: 1.2rem;
+}
+
+.card-footer a small {
+  color: #a77544;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.card-footer a small:hover {
+  color: #4774c8;
+  text-decoration: underline;
+}
+@media (max-width: 991.98px) {
+  .card.card-visible,
+  .card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 48px rgba(46, 95, 167, 0.18),
+      0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .card.card-visible .card-img-top,
+  .card:hover .card-img-top {
+    filter: brightness(1) saturate(1.2);
+  }
+}
+
+.bg-overlay-text button,
+.btn-success {
+  background: linear-gradient(90deg, #a77544 0%, #e8e821 100%);
+  color: #aa18df;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 24px rgba(167, 117, 68, 0.18);
+  transition: background 0.4s, transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-overlay-text button:hover,
+.btn-success:hover {
+  background: linear-gradient(90deg, #e8e821 0%, #a77544 100%);
+  color: #fff;
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(167, 117, 68, 0.28);
+  filter: brightness(1.08);
+}
+
+.bg-overlay-text button:active,
+.btn-success:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(167, 117, 68, 0.18);
+}
