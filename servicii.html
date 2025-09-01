@@ -220,7 +220,7 @@
       </div>
     </section>
     <section>
-      <div class="container">
+      <div class="container acordeoane">
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -230,26 +230,18 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseOne"
               >
-                Accordion Item #1
-                <span class="custom-arrow ms-2">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
+                De ce să alegi salonul nostru?
               </button>
             </h2>
             <div
               id="panelsStayOpen-collapseOne"
-              class="accordion-collapse collapse show"
+              class="accordion-collapse collapse"
             >
               <div class="accordion-body">
-                <strong>This is the first item’s accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It’s also worth noting that
-                just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                Primești atenție personalizată și tratamente adaptate nevoilor
+                tale. Fiecare ședință este gândită să te relaxeze, să-ți
+                revigoreze corpul și să-ți ofere rezultate vizibile. Atmosfera
+                caldă și primitoare te ajută să scapi complet de stres.
               </div>
             </div>
           </div>
@@ -263,7 +255,7 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseTwo"
               >
-                Accordion Item #2
+                Beneficiile masajului la mine
               </button>
             </h2>
             <div
@@ -271,15 +263,14 @@
               class="accordion-collapse collapse"
             >
               <div class="accordion-body">
-                <strong>This is the second item’s accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It’s also worth
-                noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <p>✅Ameliorează tensiunea musculară și durerile de spate.</p>
+                <p>✅Îmbunătățește circulația și tonusul pielii.</p>
+                <p>
+                  ✅Contribuie la o relaxare profundă și reducerea stresului.
+                </p>
+                <p>
+                  ✅Te ajută să ai mai multă energie și stare de bine zilnică.
+                </p>
               </div>
             </div>
           </div>
@@ -293,7 +284,7 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseThree"
               >
-                Accordion Item #3
+                Ce ofer în plus față de alte saloane?
               </button>
             </h2>
             <div
@@ -301,15 +292,40 @@
               class="accordion-collapse collapse"
             >
               <div class="accordion-body">
-                <strong>This is the third item’s accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It’s also worth
-                noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <p>
+                  ♨️Tehnici moderne și personalizate, adaptate stării tale
+                  fizice.
+                </p>
+                <p>♨️Produse și uleiuri de calitate superioară.</p>
+                <p>
+                  ♨️Posibilitatea de a combina mai multe tipuri de masaj într-o
+                  ședință completă.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                Pentru cine este recomandat?
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFour"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                Serviciile mele sunt potrivite pentru oricine își dorește
+                relaxare, recuperare fizică sau tonifiere. Indiferent dacă vii
+                pentru stres, dureri musculare sau îngrijirea pielii, am soluții
+                eficiente pentru tine.
               </div>
             </div>
           </div>
@@ -451,17 +467,23 @@
     });
 
     const cards = document.querySelectorAll('.card');
+    const accordeoane = document.querySelectorAll('.accordion');
     console.log(cards);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('card-visible');
+            if (entry.target.classList.contains('card')) {
+              entry.target.classList.add('card-visible');
+            } else if (entry.target.classList.contains('accordion')) {
+              entry.target.classList.add('accordion-visible');
+            }
           }
         });
       },
       { threshold: 0.2 }
     );
     cards.forEach((card) => observer.observe(card));
+    accordeoane.forEach((accordeon) => observer.observe(accordeon));
   </script>
 </html>
