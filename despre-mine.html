@@ -26,35 +26,242 @@
     />
   </head>
   <body>
-    <section class="about-me py-5">
-      <div class="container">
-        <div class="about-block d-flex align-items-center flex-wrap">
-          <div class="about-image">
-            <img src="poze/camera-masaj.jpg" alt="Despre mine" />
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container servicii">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="poze/logo-elibra.png"
+            alt="Logo"
+            style="height: 70px; object-fit: contain"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav center-mobile ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Acasă</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="despre-mine.html"
+                >Despre Mine</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="preturi.html">Prețuri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="servicii.html">Servicii</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section
+      class="hero-section text-center position-relative d-flex align-items-center justify-content-center"
+    >
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content text-white">
+        <h1 class="display-1 fw-bold">Elibra</h1>
+        <p class="lead mt-2 mb-4">
+          Masaje și Kinetoterapie pentru relaxare și echilibru
+        </p>
+
+        <p class="mb-4 fs-5">
+          Redescoperă-ți starea de bine într-un spațiu liniștit și prietenos,
+          unde fiecare detaliu este creat pentru confortul tău.
+        </p>
+      </div>
+    </section>
+    <section class="about-section">
+      <div class="container principal">
+        <!-- Despre mine -->
+        <div class="row g-3 align-items-center mb-5 about-block">
+          <div class="col-lg-6 mb-4 mb-lg-0 about-image order-2 order-lg-1">
+            <img
+              src="poze/poza-masaj3.jpg"
+              alt="Despre mine"
+              class="img-fluid rounded shadow"
+            />
           </div>
-          <div class="about-text">
-            <h2>Salut, eu sunt [Numele tău]</h2>
+          <div class="col-lg-6 about-text order-1 order-lg-2">
+            <h2>Despre mine</h2>
             <p>
-              Sunt pasionat de masaj, recuperare și relaxare, iar misiunea mea
-              este să aduc confort și rezultate vizibile fiecărui client.
+              Sunt pasionată de relaxare și recuperare, oferind tratamente
+              personalizate fiecărei cliente. Atmosfera calmă și atenția la
+              detalii fac ședințele o experiență completă.
             </p>
           </div>
         </div>
 
-        <div class="about-block d-flex align-items-center flex-wrap reverse">
-          <div class="about-image">
-            <img src="poze/camera-masaj.jpg" alt="Serviciile mele" />
+        <!-- Salonul meu -->
+        <div
+          class="row g-3 align-items-center mb-5 flex-lg-row-reverse about-block"
+        >
+          <div class="col-lg-6 mb-4 mb-lg-0 about-image order-2 order-lg-1">
+            <img
+              src="poze/camera-masaj.jpg"
+              alt="Salon"
+              class="img-fluid rounded shadow"
+            />
           </div>
-          <div class="about-text">
-            <h2>Serviciile mele</h2>
+          <div class="col-lg-6 about-text order-1 order-lg-2">
+            <h2>Salonul meu</h2>
             <p>
-              De la masaj terapeutic la reflexoterapie și kinetoterapie, fiecare
-              ședință este personalizată și adaptată nevoilor tale.
+              Salonul este un spațiu liniștitor, amenajat cu gust și atenție la
+              detalii, care oferă o atmosferă plăcută și relaxantă pentru
+              fiecare client.
+            </p>
+          </div>
+        </div>
+        <div class="row g-3 align-items-center mb-5 about-block">
+          <div class="col-lg-6 mb-4 mb-lg-0 about-image order-2 order-lg-1">
+            <img
+              src="poze/poza-sport.jpg"
+              alt="Despre mine"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+          <div class="col-lg-6 about-text order-1 order-lg-2">
+            <h2>Experiența mea</h2>
+            <p>
+              Dețin o licență în Kinetoterapie și Motricitate Specială, precum
+              și un curs acreditat de masaj finalizat. Am acumulat o experiență
+              vastă, oferind tratamente personalizate care combină tehnici
+              moderne și abordări dovedite pentru relaxare și recuperare.
             </p>
           </div>
         </div>
       </div>
     </section>
+
+    <footer
+      style="
+        background-color: #f3e5dc;
+        padding: 40px 20px;
+        color: #3a2f2f;
+        font-family: 'Quicksand', sans-serif;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 30px;
+        "
+      >
+        <!-- Brand / Descriere -->
+        <div style="flex: 1 1 250px">
+          <h3
+            style="font-family: 'Playfair Display', serif; margin-bottom: 10px"
+          >
+            Elibra
+          </h3>
+          <p style="font-size: 14px; line-height: 1.6">
+            Masaj terapeutic, de relaxare & kinetoterapie pentru echilibrul tău
+            fizic și mental. Relaxare, refacere și grijă personală.
+          </p>
+        </div>
+
+        <!-- Linkuri utile -->
+        <div style="flex: 1 1 150px">
+          <h4 style="margin-bottom: 10px">Navigare</h4>
+          <ul style="list-style: none; padding: 0; font-size: 14px">
+            <li>
+              <a href="index.html" style="color: inherit; text-decoration: none"
+                >Acasă</a
+              >
+            </li>
+            <li>
+              <a
+                href="despre-mine.html"
+                style="color: inherit; text-decoration: none"
+                >Despre Mine</a
+              >
+            </li>
+            <li>
+              <a
+                href="preturi.html"
+                style="color: inherit; text-decoration: none"
+                >Prețuri</a
+              >
+            </li>
+            <li>
+              <a
+                href="servicii.html"
+                style="color: inherit; text-decoration: none"
+                >Servicii</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                style="color: inherit; text-decoration: none"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Program -->
+        <div style="flex: 1 1 150px">
+          <h4 style="margin-bottom: 10px">Program</h4>
+          <p style="font-size: 14px; margin: 0">
+            Pe bază de programare telefonică, prin WhatsApp sau e-mail.
+          </p>
+        </div>
+
+        <!-- Contact + Social -->
+        <div style="flex: 1 1 200px">
+          <h4 style="margin-bottom: 10px">Contact</h4>
+          <p style="font-size: 14px; margin: 0">📞 0745 123 456</p>
+          <p style="font-size: 14px; margin: 0">
+            📍
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=44.42240002025744,26.12546811757201"
+              target="_blank"
+            >
+              Calea Vitan, Nr. 9, Bl. V6
+            </a>
+          </p>
+          <p style="font-size: 14px; margin: 0">✉️ contact@elibra.ro</p>
+          <div style="margin-top: 10px">
+            <a href="#" style="margin-right: 10px; text-decoration: none"
+              >🌐 Facebook</a
+            >
+            <a href="#" style="text-decoration: none">📷 Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linie jos -->
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: 12px;
+          color: #7d6e6e;
+        "
+      >
+        © 2025 Elibra · Toate drepturile rezervate
+      </div>
+    </footer>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -66,4 +273,36 @@
     integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
     crossorigin="anonymous"
   ></script>
+  <script>
+    const topThreshold = 10;
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > topThreshold) {
+        navbar.classList.add('navbar-scroll');
+      } else {
+        navbar.classList.remove('navbar-scroll');
+      }
+    });
+    const banner = document.querySelector('.banner-header');
+    const hero = document.querySelector('.hero-section');
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+      hero.classList.add('visible');
+    });
+
+    const aboutBlocks = document.querySelectorAll('.about-block');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    aboutBlocks.forEach((block) => observer.observe(block));
+  </script>
 </html>
