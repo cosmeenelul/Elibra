@@ -11,6 +11,13 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Quicksand:wght@400;500&display=swap"
@@ -28,7 +35,7 @@
           />
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -36,7 +43,9 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav center-mobile ms-auto">
@@ -62,7 +71,7 @@
       </div>
     </nav>
     <div id="bg-slideshow"></div>
-    <div class="bg-overlay-text">
+    <div class="bg-overlay-text container-fluid">
       <h1 class="display-1 text-white text-center">
         Redescoperă-ți starea de bine
       </h1>
@@ -188,29 +197,35 @@
           <h4 style="margin-bottom: 10px">Navigare</h4>
           <ul style="list-style: none; padding: 0; font-size: 14px">
             <li>
-              <a href="#acasa" style="color: inherit; text-decoration: none"
+              <a href="index.html" style="color: inherit; text-decoration: none"
                 >Acasă</a
               >
             </li>
             <li>
-              <a href="#servicii" style="color: inherit; text-decoration: none"
+              <a
+                href="despre-mine.html"
+                style="color: inherit; text-decoration: none"
                 >Despre Mine</a
               >
             </li>
             <li>
               <a
-                href="#programari"
+                href="preturi.html"
                 style="color: inherit; text-decoration: none"
                 >Prețuri</a
               >
             </li>
             <li>
-              <a href="#contact" style="color: inherit; text-decoration: none"
+              <a
+                href="servicii.html"
+                style="color: inherit; text-decoration: none"
                 >Servicii</a
               >
             </li>
             <li>
-              <a href="#contact" style="color: inherit; text-decoration: none"
+              <a
+                href="contact.html"
+                style="color: inherit; text-decoration: none"
                 >Contact</a
               >
             </li>
@@ -220,22 +235,36 @@
         <!-- Program -->
         <div style="flex: 1 1 150px">
           <h4 style="margin-bottom: 10px">Program</h4>
-          <p style="font-size: 14px; margin: 0">Luni - Vineri: 17:00 - 20:00</p>
-          <p style="font-size: 14px; margin: 0">Sâmbătă: 10:00 - 18:00</p>
-          <p style="font-size: 14px; margin: 0">Duminică: Închis</p>
+          <p style="font-size: 14px; margin: 0">
+            Pe bază de programare telefonică, prin WhatsApp sau e-mail.
+          </p>
         </div>
 
         <!-- Contact + Social -->
         <div style="flex: 1 1 200px">
           <h4 style="margin-bottom: 10px">Contact</h4>
-          <p style="font-size: 14px; margin: 0">📞 0745 123 456</p>
-          <p style="font-size: 14px; margin: 0">✉️ contact@elibra.ro</p>
-          <div style="margin-top: 10px">
-            <a href="#" style="margin-right: 10px; text-decoration: none"
-              >🌐 Facebook</a
+          <p style="font-size: 14px; margin: 0">
+            📞
+            <a href="tel:0732971246" style="text-decoration: none"
+              >0745 123 456</a
             >
-            <a href="#" style="text-decoration: none">📷 Instagram</a>
-          </div>
+          </p>
+          <p style="font-size: 14px; margin: 0">
+            📍
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=44.42240002025744,26.12546811757201"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              Calea Vitan Nr. 9, Bl. V6
+            </a>
+          </p>
+          <p style="font-size: 14px; margin: 0">
+            ✉️
+            <a href="mailto:contact@elibra.ro" style="text-decoration: none"
+              >contact@elibra.ro</a
+            >
+          </p>
         </div>
       </div>
 

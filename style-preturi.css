@@ -68,13 +68,13 @@ body {
 }
 
 body {
-  background-position: center; /* centrată */
+  background-position: center;
   position: relative;
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  transition: background-image 1.5s ease-in-out;
+  transition: background-image 0.4s linear;
 }
 
 .bg-negru {
