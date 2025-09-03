@@ -42,7 +42,7 @@ body {
   z-index: 0;
   background-size: cover;
   background-position: center;
-  transition: background-image 1s ease;
+  transition: background-image 1.125s linear;
 }
 
 .bg-overlay-text {
@@ -56,21 +56,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
 }
+
 .bg-overlay-text h1 {
-  font-weight: 700;
-  font-size: 5rem;
-  letter-spacing: 2px;
-  background: linear-gradient(45deg, #e8e821 20%, #ebe018 80%);
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 150, 0.8),
+    rgba(255, 102, 0, 0.8)
+  );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 4px 32px rgba(46, 95, 167, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25);
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
 }
+
 .bg-overlay-text p {
-  font-size: xx-large;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 400;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 1), 0 2px 8px rgba(46, 95, 167, 0.25);
   max-width: 800px;

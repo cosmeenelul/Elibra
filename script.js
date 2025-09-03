@@ -2,6 +2,12 @@ const images = [
   'poze/poza-masaj.jpg',
   'poze/poza-masaj2.jpg',
   'poze/poza-masaj3.jpg',
+  'poze/bg-servicii.jpg',
+  'poze/kinetoterapie.jpg',
+  'poze/poza-verde-3.jpg',
+  'poze/poza-verde-bg.jpg',
+  'poze/masaj-terapeutic.jpg',
+  'poze/poza-sport.jpg',
 ];
 let idx = 0;
 const bg = document.getElementById('bg-slideshow');
@@ -10,7 +16,7 @@ function showBg() {
   idx = (idx + 1) % images.length;
 }
 showBg();
-setInterval(showBg, 4000);
+setInterval(showBg, 1500);
 
 const topThreshold = 10;
 window.addEventListener('scroll', function () {
