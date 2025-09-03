@@ -25,6 +25,9 @@
     font-size: 1.2rem; /* mai mare decât defaultul mobil */
     line-height: 1.5; /* mai lizibil pe mobil */
   }
+  .container {
+    padding: 20px;
+  }
 }
 @media (min-width: 992px) {
   .navbar {
@@ -95,69 +98,6 @@ body::before {
 body.loaded::before {
   opacity: 1;
 }
-
-@media (max-width: 768px) {
-  .container.principal {
-    padding: 20px !important;
-  }
-}
-.container.principal {
-  padding: 100px;
-}
-.about-block {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1.5s ease;
-}
-
-.about-block.visible {
-  opacity: 1;
-  transform: translateY(0px);
-  transition: all 1.5s ease;
-}
-
-/* Stil imagini */
-.about-image img {
-  border-radius: 10px;
-  width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.about-text {
-  box-sizing: border-box;
-  padding: 8;
-  border-radius: 0;
-  box-shadow: none;
-  color: #4b3f2f;
-}
-
-/* Titluri */
-.about-text h2 {
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ab8d6a; /* portocaliu blând pentru titlu */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* Paragraf */
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Poziționare peste imagine dacă e nevoie */
-.about-section .col-lg-6 {
-  position: relative;
-}
-
-.about-text {
-  position: relative;
-  z-index: 1;
-}
-
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -166,7 +106,7 @@ body.loaded::before {
   justify-content: center;
   align-items: center; /* centru orizontal */
   text-align: center;
-  background-image: url('poze/poza-salon.jpg'); /* fundalul */
+  background-image: url('poze/poza-contact.jpg'); /* fundalul */
   background-size: cover;
   background-position: center bottom;
   opacity: 0; /* pentru animație fade-in */
@@ -198,7 +138,7 @@ body.loaded::before {
 .hero-content h1 {
   font-size: clamp(4rem, 7vw, 10rem);
   font-weight: 800;
-  background: linear-gradient(120deg, #f3c677, #e1a160, #ffd699);
+  background: linear-gradient(135deg, #fdf1e0, #9c99ff, #d6b9ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.2rem;
@@ -237,4 +177,25 @@ body.loaded::before {
 .hero-content p:hover {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.7),
     0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+}
+.btn-smecher {
+  background: linear-gradient(135deg, #ff9a76, #ff6a88);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(255, 105, 135, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-smecher:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 105, 135, 0.6);
+  background: linear-gradient(135deg, #ff6a88, #ff9a76);
+}
+.container p,
+h2 {
+  color: #9c99ff;
 }
