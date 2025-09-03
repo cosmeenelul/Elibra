@@ -239,6 +239,9 @@ body.loaded::before {
     0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
 }
 
+
+/* MENIU HAMBURGER */
+
 .navbar-toggler {
   width: 20px;
   height: 20px;
