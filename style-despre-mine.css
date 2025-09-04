@@ -67,7 +67,6 @@ body {
     sans-serif;
   position: relative;
 }
-
 body::before {
   content: '';
   position: fixed;

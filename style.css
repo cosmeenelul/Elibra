@@ -28,9 +28,9 @@ body {
     sans-serif;
 }
 body {
-  background-size: 110%; /* zoom imagine */
-  background-repeat: repeat-y; /* nu se repetă */
-  background-position: center; /* centrată */
+  background-size: 110%;
+  background-repeat: repeat-y;
+  background-position: center;
   position: relative;
   z-index: -1;
 }
@@ -43,6 +43,7 @@ body {
   background-size: cover;
   background-position: center;
   transition: background-image 2s linear;
+  background-image: url('poze/masaj-terapeutic.jpg');
 }
 
 .bg-overlay-text {

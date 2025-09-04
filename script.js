@@ -1,23 +1,3 @@
-const images = [
-  'poze/poza-masaj.jpg',
-  'poze/poza-masaj2.jpg',
-  'poze/poza-masaj3.jpg',
-  'poze/bg-servicii.jpg',
-  'poze/kinetoterapie.jpg',
-  'poze/poza-verde-3.jpg',
-  'poze/poza-verde-bg.jpg',
-  'poze/masaj-terapeutic.jpg',
-  'poze/poza-sport.jpg',
-];
-let idx = 0;
-const bg = document.getElementById('bg-slideshow');
-function showBg() {
-  bg.style.backgroundImage = `url('${images[idx]}')`;
-  idx = (idx + 1) % images.length;
-}
-showBg();
-setInterval(showBg, 4000);
-
 const topThreshold = 10;
 window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.navbar');
@@ -26,6 +6,10 @@ window.addEventListener('scroll', function () {
   } else {
     navbar.classList.remove('navbar-scroll');
   }
+});
+const bg = document.querySelector('bg-slideshow');
+document.addEventListener('DOMContentLoaded', function () {
+  bg.classList.add('active');
 });
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver(
