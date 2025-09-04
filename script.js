@@ -39,3 +39,10 @@ const observer = new IntersectionObserver(
   { threshold: 0.2 }
 );
 cards.forEach((card) => observer.observe(card));
+
+const text = document.querySelector('.bg-overlay-text');
+const btn = document.querySelector('.btn-smecher');
+document.addEventListener('DOMContentLoaded', function () {
+  text.classList.add('visible');
+  btn.classList.add('visible');
+});
