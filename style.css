@@ -42,7 +42,7 @@ body {
   z-index: 0;
   background-size: cover;
   background-position: center;
-  transition: background-image 1.125s linear;
+  transition: background-image 2s linear;
 }
 
 .bg-overlay-text {
@@ -59,7 +59,6 @@ body {
 }
 
 .bg-overlay-text h1 {
-  font-size: clamp(2rem, 6vw, 5rem);
   font-weight: 800;
   background: linear-gradient(
     135deg,
@@ -71,7 +70,7 @@ body {
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.2rem;
   line-height: 1.2;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); */
   letter-spacing: 2px;
   opacity: 0;
   transition: all 1s ease;
@@ -82,7 +81,6 @@ body {
 }
 
 .bg-overlay-text p {
-  font-size: clamp(1.2rem, 2.2vw, 3rem);
   font-weight: 500;
   background: linear-gradient(
     120deg,
@@ -103,20 +101,6 @@ body {
 
 .bg-overlay-text.visible p {
   opacity: 1;
-}
-
-@media (max-width: 991.98px) {
-  .bg-overlay-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-  .bg-overlay-text p {
-    font-size: 1.2rem;
-    padding: 0 0.5rem;
-    color: #ffffff !important;
-    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35),
-      0 2px 8px rgba(46, 95, 167, 0.25) !important;
-  }
 }
 @media (min-width: 992px) {
   .navbar {

@@ -16,7 +16,7 @@ function showBg() {
   idx = (idx + 1) % images.length;
 }
 showBg();
-setInterval(showBg, 1500);
+setInterval(showBg, 4000);
 
 const topThreshold = 10;
 window.addEventListener('scroll', function () {

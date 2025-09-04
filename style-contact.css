@@ -18,13 +18,6 @@
   .navbar-brand {
     color: #111;
   }
-  h1 {
-    font-size: 2.5rem;
-  }
-  p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
 }
 @media (min-width: 992px) {
   .navbar {
@@ -109,7 +102,7 @@ body.loaded::before {
   transition: all 1s ease-in-out;
   z-index: 0;
   box-sizing: border-box;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .hero-section.visible {
@@ -132,14 +125,12 @@ body.loaded::before {
 }
 
 .hero-content h1 {
-  font-size: clamp(4rem, 7vw, 10rem);
   font-weight: 800;
   background: linear-gradient(135deg, #fdf1e0, #9c99ff, #d6b9ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.2rem;
   line-height: 1.2;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -150,7 +141,6 @@ body.loaded::before {
 }
 
 .hero-content p {
-  font-size: clamp(1.2rem, 2.2vw, 3rem);
   font-weight: 400;
   background: linear-gradient(
     120deg,
@@ -165,8 +155,7 @@ body.loaded::before {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.6),
-    0 0 20px rgba(255, 255, 255, 0.4);
+
   transition: all 0.3s ease-in-out;
 }
 

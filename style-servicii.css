@@ -95,6 +95,7 @@
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
+    background: url('poze/poza-relaxare-verde-mobile.jpg');
   }
   .navbar {
     background-color: #ffffff;
@@ -104,13 +105,6 @@
   }
   .navbar-brand {
     color: #111;
-  }
-  h1 {
-    font-size: 2.5rem; /* mai mare decât defaultul mobil */
-  }
-  p {
-    font-size: 1.2rem; /* mai mare decât defaultul mobil */
-    line-height: 1.5; /* mai lizibil pe mobil */
   }
 }
 @media (min-width: 992px) {
@@ -161,7 +155,13 @@ body {
   position: relative;
 }
 
-/* pseudo-element pentru background */
+/* Pe mobile, scoatem background-attachment: fixed */
+@media (max-width: 768px) {
+  body::before {
+    position: absolute;
+    background-attachment: scroll;
+  }
+}
 body::before {
   content: '';
   position: fixed;
@@ -174,7 +174,7 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0; /* start transparent */
+  opacity: 0;
   transition: opacity 1.5s ease-in-out;
   z-index: -1;
 }
@@ -212,14 +212,12 @@ body.loaded::before {
 
 .hero-content h1 {
   font-weight: 800;
-  font-size: clamp(2rem, 6vw, 5rem);
   color: #fff;
   margin-bottom: 1rem;
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
   color: #fff;
   margin-bottom: 2rem;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);

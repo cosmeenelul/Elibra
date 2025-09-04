@@ -71,6 +71,10 @@
         </div>
       </div>
     </nav>
+    
+    <div class="bg bg1" style="background-image: url('poze/card-masaj-anticelulitic.jpg')"></div>
+    <div class="bg bg2"></div>
+    <div class="overlay"></div>
       <section id="preturi_masaje" class="price_section">
         <div class="container">
           <div class="category_container">
@@ -459,13 +463,41 @@
           navbar.classList.remove('navbar-scroll');
         }
       });
-      const poze = ["url('poze/poza-relaxare-verde.jpg')","url('poze/poza-verde-bg.jpg')","url('poze/poza-verde-3.jpg')"];
-      window.addEventListener('scroll', function () {
-        const scrollY = window.scrollY;
-        const body = document.body;
-        const index = Math.floor(scrollY/500) % poze.length;
-        body.style.backgroundImage = poze[index];
-      });
+      const pozeDesktop = [
+  "poze/card-masaj-anticelulitic.jpg",
+  "poze/poza-verde-bg.jpg",
+  "poze/poza-verde-3.jpg"
+];
+
+const pozeMobile = [
+  "poze/card-masaj-anticelulitic-mobile.jpg",
+  "poze/poza-verde-bg-mobile.jpg",
+  "poze/poza-verde-3-mobile.jpg"
+];
+
+
+let currentIndex = 0;
+const bg1 = document.querySelector('.bg1');
+const bg2 = document.querySelector('.bg2');
+
+bg1.classList.add('active'); // poza initiala
+
+window.addEventListener('scroll', () => {
+  const pozeSet = window.innerWidth <= 768 ? pozeMobile : pozeDesktop;
+  const index = Math.floor(window.scrollY / 500) % pozeSet.length;
+
+  if (index !== currentIndex) {
+    const nextBg = currentIndex % 2 === 0 ? bg2 : bg1;
+    const currentBg = currentIndex % 2 === 0 ? bg1 : bg2;
+
+    nextBg.style.backgroundImage = `url('${pozeSet[index]}')`;
+    nextBg.classList.add('active');
+    currentBg.classList.remove('active');
+
+    currentIndex = index;
+  }
+});
+
       window.addEventListener('DOMContentLoaded', () => {
   const tabele = document.querySelectorAll('.result_content_table');
   tabele.forEach((tabel, index) => {

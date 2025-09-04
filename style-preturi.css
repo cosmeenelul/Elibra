@@ -59,7 +59,6 @@
 }
 html,
 body {
-  background-image: url('poze/poza-verde-bg.jpg');
   min-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -73,14 +72,56 @@ body {
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  transition: background-image 0.4s linear;
+}
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
 }
 
+.bg.active {
+  opacity: 1;
+}
+.bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+  background: #111;
+}
+footer {
+  position: relative;
+  z-index: 1; /* mai mare decât -1 */
+}
+/* @media (max-width: 768px) {
+  body {
+
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+} */
 .bg-negru {
   position: relative;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* NEGRU TRANSPARENT */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
