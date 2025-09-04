@@ -91,12 +91,6 @@
     flex-direction: column !important;
     align-items: center !important;
   }
-  body {
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background: url('poze/poza-relaxare-verde-mobile.jpg');
-  }
   .navbar {
     background-color: #ffffff;
   }
@@ -105,6 +99,19 @@
   }
   .navbar-brand {
     color: #111;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('poze/poza-relaxare-verde-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
   }
 }
 @media (min-width: 992px) {
@@ -155,13 +162,6 @@ body {
   position: relative;
 }
 
-/* Pe mobile, scoatem background-attachment: fixed */
-@media (max-width: 768px) {
-  body::before {
-    position: absolute;
-    background-attachment: scroll;
-  }
-}
 body::before {
   content: '';
   position: fixed;
@@ -169,7 +169,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('poze/poza-relaxare-verde.jpg');
+  /* background-image: url('poze/poza-relaxare-verde.jpg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -224,6 +224,8 @@ body.loaded::before {
 }
 
 /* Container iconite */
+
+/* Container flex */
 .hero-content .d-flex {
   display: flex;
   justify-content: center;
@@ -232,6 +234,7 @@ body.loaded::before {
   margin-top: 2rem;
 }
 
+/* Icon wrapper */
 .service-icon {
   display: flex;
   flex-direction: column;
@@ -239,6 +242,7 @@ body.loaded::before {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* SVG icon */
 .service-icon svg {
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
@@ -251,6 +255,7 @@ body.loaded::before {
   animation: bounce 0.5s infinite;
 }
 
+/* Text sub icon */
 .service-icon p {
   margin-top: 0.5rem;
   font-weight: 600;
@@ -274,15 +279,77 @@ body.loaded::before {
   font-size: 2rem;
 }
 
+/* Animatie bounce */
 @keyframes bounce {
   0%,
   100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(-10px);
   }
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .d-flex {
+    gap: 2rem;
+  }
+  .service-icon svg {
+    width: 70px;
+    height: 70px;
+    padding: 18px;
+  }
+  .service-icon p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .d-flex {
+    gap: 1.8rem;
+  }
+  .service-icon svg {
+    width: 65px;
+    height: 65px;
+    padding: 16px;
+  }
+  .service-icon p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .d-flex {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+  .service-icon svg {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+  }
+  .service-icon p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .d-flex {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .service-icon svg {
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+  }
+  .service-icon p {
+    font-size: 0.8rem;
+  }
+}
+
 .accordion .accordion-item {
   background: #fdf6f0; /* crem deschis, cald */
   border-radius: 15px;

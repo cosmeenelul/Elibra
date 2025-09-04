@@ -89,14 +89,6 @@ body.loaded::before {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .container.principal {
-    padding: 20px !important;
-  }
-}
-.container.principal {
-  padding: 100px;
-}
 .about-block {
   opacity: 0;
   transform: translateY(50px);
