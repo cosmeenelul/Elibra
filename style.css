@@ -35,7 +35,7 @@ body {
   z-index: -1;
 }
 
-#bg-slideshow {
+/* #bg-slideshow {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -44,8 +44,38 @@ body {
   background-position: center;
   transition: background-image 2s linear;
   background-image: url('poze/masaj-terapeutic.jpg');
+  opacity: 0;
+} */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('poze/masaj-terapeutic.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  z-index: 0;
+  box-sizing: border-box;
+  /* padding: 2rem; */
 }
 
+.hero-section.visible {
+  opacity: 1;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
 .bg-overlay-text {
   position: absolute;
   top: 0;
@@ -155,6 +185,7 @@ body {
   transform: translateY(40px);
   transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
     transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
 }
 
 .card.card-visible {
@@ -201,6 +232,7 @@ body {
   border-top: none;
   text-align: right;
   padding-right: 1.2rem;
+  margin-top: auto;
 }
 
 .card-footer a small {

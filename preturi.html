@@ -71,10 +71,9 @@
         </div>
       </div>
     </nav>
-    
-    <div class="bg bg1" style="background-image: url('poze/card-masaj-anticelulitic.jpg')"></div>
-    <div class="bg bg2"></div>
     <div class="overlay"></div>
+    <div class="bg bg1" style="background-image: url('poze/card-masaj-anticelulitic.jpg');" ></div>
+    <div class="bg bg2"></div>
       <section id="preturi_masaje" class="price_section">
         <div class="container">
           <div class="category_container">
@@ -119,6 +118,7 @@
                     <p class="row_detail_price">100 RON</p>
                   </td>
                 </tr>
+                <tr>
                   <td class="category_row title_row">
                     <p class="row_detail_service">Masaj Anticelulitic</p>
                     <p class="row_additional_detail"></p>
@@ -401,6 +401,12 @@
           <p style="font-size: 14px; margin: 0">
             Pe bază de programare telefonică, prin WhatsApp sau e-mail.
           </p>
+          <ul class="list-unstyled mt-2" style="font-size: 14px">
+            <li><strong>Luni - Joi:</strong> 17:00 - 22:00</li>
+            <li><strong>Vineri:</strong> 15:00 - 22:00</li>
+            <li><strong>Sâmbătă:</strong> 09:00 - 18:00</li>
+            <li><strong>Duminică:</strong> 09:00 - 18:00</li>
+          </ul>
         </div>
 
         <!-- Contact + Social -->
@@ -409,7 +415,7 @@
           <p style="font-size: 14px; margin: 0">
             📞
             <a href="tel:0732971246" style="text-decoration: none"
-              >0745 123 456</a
+              >0732 971 246</a
             >
           </p>
           <p style="font-size: 14px; margin: 0">
@@ -419,13 +425,13 @@
               target="_blank"
               style="text-decoration: none"
             >
-              Calea Vitan Nr. 9, Bl. V6
+              Calea Vitan Nr. 9, Sector 3, București
             </a>
           </p>
           <p style="font-size: 14px; margin: 0">
             ✉️
             <a href="mailto:contact@elibra.ro" style="text-decoration: none"
-              >contact@elibra.ro</a
+              >centru.elibra@gmail.com</a
             >
           </p>
         </div>
@@ -497,7 +503,10 @@ window.addEventListener('scroll', () => {
     currentIndex = index;
   }
 });
-
+const overlay = document.querySelector('.overlay');
+window.addEventListener('DOMContentLoaded',function(){
+  overlay.classList.add('inactive')
+})
       window.addEventListener('DOMContentLoaded', () => {
   const tabele = document.querySelectorAll('.result_content_table');
   tabele.forEach((tabel, index) => {

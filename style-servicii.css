@@ -64,6 +64,19 @@
   transform: translateY(0);
 }
 
+@media (max-width: 992px) and (min-width: 768px) {
+  .card-content {
+    top: 0;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+}
+
 .btn-glow {
   border-radius: 50px;
   padding: 0.6rem 2rem;
@@ -198,8 +211,26 @@ body.loaded::before {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
-  overflow: hidden;
+  background-image: url('poze/masaj-terapeutic.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  z-index: 0;
+  box-sizing: border-box;
+  /* padding: 2rem; */
+}
+
+.hero-section.visible {
+  opacity: 1;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
 .hero-overlay {
@@ -219,10 +250,10 @@ body.loaded::before {
 }
 
 .hero-content h1 {
-  font-weight: 800;
+  /* font-weight: 800; */
   color: #fff;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+  /* text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6); */
 }
 
 .hero-content p {
@@ -282,7 +313,6 @@ body.loaded::before {
 .scroll-down i {
   animation: bounce 2s infinite;
   color: #fff;
-  font-size: 2rem;
 }
 
 /* Animatie bounce */

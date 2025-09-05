@@ -7,9 +7,9 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('navbar-scroll');
   }
 });
-const bg = document.querySelector('bg-slideshow');
+const bg = document.querySelector('.hero-section');
 document.addEventListener('DOMContentLoaded', function () {
-  bg.classList.add('active');
+  bg.classList.add('visible');
 });
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver(
