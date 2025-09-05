@@ -202,6 +202,7 @@ body::before {
 
 body.loaded::before {
   opacity: 0;
+  pointer-events: none;
 }
 
 .hero-section {

@@ -86,6 +86,7 @@ body::before {
 
 body.loaded::before {
   opacity: 0;
+  pointer-events: none;
 }
 
 .about-block {
@@ -194,11 +195,7 @@ body.loaded::before {
 
 .hero-content p {
   font-weight: 400;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(245, 245, 245, 0.85)
-  );
+  background-color: #fff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2.5rem;
@@ -207,8 +204,6 @@ body.loaded::before {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.6),
-    0 0 20px rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease-in-out;
 }
 

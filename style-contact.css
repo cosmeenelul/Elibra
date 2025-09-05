@@ -86,6 +86,7 @@ body::before {
 
 body.loaded::before {
   opacity: 1;
+  pointer-events: none;
 }
 .hero-section {
   position: relative;
