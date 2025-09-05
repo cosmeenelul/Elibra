@@ -81,7 +81,7 @@
     </nav>
     <section class="hero-section text-center">
       <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
+      <!-- <div class="hero-overlay"></div> -->
 
       <div class="hero-content">
         <div class="container">
@@ -405,8 +405,8 @@
     //   heroOverlay.style.opacity = opacity;
     // });
     const bg = document.querySelector('.hero-section');
-    window.addEventListener('DOMContentLoaded', function () {
-      bg.classList.add('visible');
+    window.addEventListener('load', function () {
+      document.body.classList.add('loaded');
     });
     const topThreshold = 10;
     window.addEventListener('scroll', function () {

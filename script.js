@@ -7,9 +7,8 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('navbar-scroll');
   }
 });
-const bg = document.querySelector('.hero-section');
-document.addEventListener('DOMContentLoaded', function () {
-  bg.classList.add('visible');
+window.addEventListener('load', function () {
+  this.document.body.classList.add('loaded');
 });
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver(
@@ -26,7 +25,7 @@ cards.forEach((card) => observer.observe(card));
 
 const text = document.querySelector('.bg-overlay-text');
 const btn = document.querySelector('.btn-smecher');
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
   text.classList.add('visible');
   btn.classList.add('visible');
 });

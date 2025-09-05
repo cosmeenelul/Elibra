@@ -34,7 +34,27 @@ body {
   position: relative;
   z-index: -1;
 }
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('poze/poza-relaxare-verde.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 1;
+  transition: opacity 2s ease;
+  z-index: 999;
+  background: #fff;
+}
 
+body.loaded::before {
+  opacity: 0;
+}
 /* #bg-slideshow {
   position: relative;
   width: 100vw;
@@ -58,15 +78,11 @@ body {
   background-image: url('poze/masaj-terapeutic.jpg');
   background-size: cover;
   background-position: center bottom;
-  opacity: 0;
-  transition: all 1s ease-in-out;
+  opacity: 1;
+
   z-index: 0;
   box-sizing: border-box;
   /* padding: 2rem; */
-}
-
-.hero-section.visible {
-  opacity: 1;
 }
 
 .hero-section::before {

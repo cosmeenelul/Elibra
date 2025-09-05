@@ -72,6 +72,22 @@ body {
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 1;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: #fff; /* flash inițial */
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity 2s ease;
+  opacity: 1;
+}
+
+body.loaded::before {
+  opacity: 0;
 }
 .bg {
   position: fixed;
@@ -84,7 +100,7 @@ body {
   background-repeat: no-repeat;
   z-index: -1;
   transition: opacity 1s ease-in-out;
-  opacity: 0;
+  opacity: 1;
 }
 
 .bg.active {

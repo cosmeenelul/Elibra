@@ -164,7 +164,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
 }
 .navbar-scroll .nav-link {
   color: #111 !important;
@@ -194,13 +194,14 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-  z-index: -1;
+  opacity: 1;
+  transition: opacity 2s ease;
+  z-index: 999;
+  background: #fff;
 }
 
 body.loaded::before {
-  opacity: 1;
+  opacity: 0;
 }
 
 .hero-section {
@@ -211,18 +212,13 @@ body.loaded::before {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('poze/masaj-terapeutic.jpg');
   background-size: cover;
   background-position: center bottom;
-  opacity: 0;
+  opacity: 1;
   transition: all 1s ease-in-out;
   z-index: 0;
   box-sizing: border-box;
   /* padding: 2rem; */
-}
-
-.hero-section.visible {
-  opacity: 1;
 }
 
 .hero-section::before {
