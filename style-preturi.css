@@ -101,7 +101,7 @@ body.loaded::before {
   background-repeat: no-repeat;
   z-index: -1;
   transition: opacity 1s ease-in-out;
-  opacity: 1;
+  opacity: 0;
 }
 
 .bg.active {
