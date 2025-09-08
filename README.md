@@ -8,7 +8,7 @@ Acesta este un **site static** pentru **Centrul Elibra de Masaj și Kinetoterapi
 
 ## 🌐 Live Demo
 
-[Vezi site-ul live](https://your-domain.com)
+[Vezi site-ul live](https://centrul-elibra.ro)
 
 ---
 
@@ -38,5 +38,6 @@ Acesta este un **site static** pentru **Centrul Elibra de Masaj și Kinetoterapi
 - Creează un record **A** sau **CNAME** care indică către distribuția CloudFront.  
 
 ---
+
 
 
