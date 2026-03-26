@@ -34,7 +34,7 @@ Acesta este un **site static** pentru **Centrul Elibra de Masaj și Kinetoterapi
 - Activează caching pentru performanță.
 
 ### Route 53 🗺️
-- Adaugă domeniul tău personalizat.  
+- Adaugă domeniul personalizat.  
 - Creează un record **A** sau **CNAME** care indică către distribuția CloudFront.  
 
 ---
